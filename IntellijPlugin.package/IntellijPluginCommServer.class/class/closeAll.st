@@ -1,5 +1,5 @@
 as yet unclassified
-removeAllFromTranscript
+closeAll
 	| toRemove |
 
 	toRemove := Transcript dependents select: [:d |
@@ -8,4 +8,6 @@ removeAllFromTranscript
 
 	toRemove reverseDo: [:d |
 		Transcript removeDependent: d.
-	]	
+	].
+	
+	WebServer reset
