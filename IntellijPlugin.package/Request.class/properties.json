@@ -1,0 +1,17 @@
+{
+	"category" : "IntellijPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ws",
+		"id",
+		"content",
+		"action" ],
+	"name" : "Request",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

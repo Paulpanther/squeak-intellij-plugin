@@ -1,0 +1,14 @@
+{
+	"category" : "IntellijPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"ws" ],
+	"name" : "IntellijPluginCommServer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

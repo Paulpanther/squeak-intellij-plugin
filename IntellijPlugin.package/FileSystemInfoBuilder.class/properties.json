@@ -1,0 +1,14 @@
+{
+	"category" : "IntellijPlugin",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "FileSystemInfoBuilder",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
