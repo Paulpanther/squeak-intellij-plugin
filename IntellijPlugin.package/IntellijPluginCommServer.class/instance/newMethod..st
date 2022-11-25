@@ -3,7 +3,7 @@ newMethod: request
 	| class method body i |
 
 	class := Compiler evaluate: (request at: #class).
-	method := request at: #method.
+	method := (request at: #method) asSymbol.
 	body := ''.
 
 	(method includesSubstring: ':') ifTrue: [
@@ -19,7 +19,7 @@ newMethod: request
 
     [
         class compile: body.
-        class organization classify: method under: (request at: #category) logged: true.
+        class organization classify: method under: ((request at: #category) asSymbol) logged: true.
 
         request respond: true.
     ] on: SyntaxErrorNotification do: [:ex |

@@ -1,7 +1,10 @@
 endpoints
 removeCategory: request
-    	| class |
+    	| class category |
 	
 	class := Compiler evaluate: (request at: #class).
-	class removeCategory: (request at: #category).
+	category := (request at: #category) asSymbol.
+	(class organization listAtCategoryNamed: category) do:
+		[:sel | class removeSelector: sel].
+	class organization removeCategory: category.
 	request respond: true.
