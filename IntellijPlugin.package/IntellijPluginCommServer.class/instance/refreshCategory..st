@@ -1,11 +1,12 @@
 endpoints
 refreshCategory: request
-    | class category |
+	| class category isInstance |
 
-    class := Compiler evaluate: (request at: #class).
-    category := request at: #category.
+	class := request classParam.
+	category := request at: #category.
+	isInstance := request at: #isInstance.
 
-    request respond: ({
-            #name -> category.
-            #children -> (FileSystemInfoBuilder new methodsInClass: class forCategory: category)
-        } asDictionary)
+	request respond: (FileSystemInfoBuilder new 
+		category: category 
+		inClass: class 
+		isInstance: isInstance)

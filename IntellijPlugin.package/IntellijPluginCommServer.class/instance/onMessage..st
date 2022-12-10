@@ -16,14 +16,13 @@ onMessage: raw
 			(request action = #new_method) ifTrue: [self newMethod: request].
 			(request action = #new_package) ifTrue: [self newPackage: request].
 			(request action = #refresh_category) ifTrue: [self refreshCategory: request].
-            	(request action = #refresh_class) ifTrue: [self refreshClass: request].
-            	(request action = #refresh_package) ifTrue: [self refreshPackage: request].
+			(request action = #refresh_class) ifTrue: [self refreshClass: request].
+			(request action = #refresh_package) ifTrue: [self refreshPackage: request].
 			(request action = #remove_category) ifTrue: [self removeCategory: request].
 			(request action = #remove_class) ifTrue: [self removeClass: request].
 			(request action = #remove_method) ifTrue: [self removeMethod: request].
 			(request action = #remove_package) ifTrue: [self removePackage: request].
 			(request action = #get_class_comment) ifTrue: [self getClassComment: request].
-			(request action = #get_instance_variables) ifTrue: [self getInstanceVariables: request].
 			(request action = #get_class_variables) ifTrue: [self getClassVariables: request].
 		] on: Error do: [:ex |
 			self halt.

@@ -3,7 +3,7 @@ writeFile: request
 	| class code |
 
 	code := request at: #content.
-	class := Compiler evaluate: (request at: #class).
+	class := request classParam.
 	[
 		class compile: code.
 		request respond: true.

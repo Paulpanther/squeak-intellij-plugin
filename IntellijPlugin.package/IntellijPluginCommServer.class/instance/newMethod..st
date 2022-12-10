@@ -2,7 +2,7 @@ endpoints
 newMethod: request
 	| class method body i |
 
-	class := Compiler evaluate: (request at: #class).
+	class := request classParam.
 	method := (request at: #method) asSymbol.
 	body := ''.
 

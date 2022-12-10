@@ -3,7 +3,6 @@ methodsInClass: aClass forCategory: aCategory
 
 	^  (aClass methodsInCategory: aCategory) collect: [:aMethod |
 		{
-			#name -> aMethod.
-			#children -> Array new
+			#name -> aMethod
 		} asDictionary
 	]

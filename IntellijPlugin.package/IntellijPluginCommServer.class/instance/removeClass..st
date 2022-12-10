@@ -1,7 +1,5 @@
 endpoints
 removeClass: request
-    	| class |
-	
-	class := Compiler evaluate: (request at: #class).
-	class removeFromSystem.
+
+	request classParam removeFromSystem.
 	request respond: true.

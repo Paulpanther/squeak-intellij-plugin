@@ -1,6 +1,4 @@
 endpoints
 renameClass: request
-	| class |
 
-	class := Compiler evaluate: (request at: #class).
-	class rename: (request at: #newName)
+	request classParam rename: (request at: #newName).

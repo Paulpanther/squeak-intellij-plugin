@@ -10,4 +10,4 @@ closeAll
 		Transcript removeDependent: d.
 	].
 	
-	WebServer reset
+	WebServer reset.

@@ -2,15 +2,7 @@ as yet unclassified
 categoriesInClass: aClass
 
 	^ (aClass organization categories collect: [:aCategory |
-		{ 
-			#name -> aCategory. 
-			#isInstance -> true.
-			#children -> (self methodsInClass: aClass forCategory: aCategory)
-		} asDictionary
+		self category: aCategory inClass: aClass isInstance: true.
 	]) , (aClass class organization categories collect: [:aCategory |
-		{ 
-			#name -> aCategory. 
-			#isInstance -> false.
-			#children -> (self methodsInClass: aClass forCategory: aCategory)
-		} asDictionary
+		self category: aCategory inClass: aClass class isInstance: false.
 	])

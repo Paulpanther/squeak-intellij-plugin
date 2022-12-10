@@ -4,7 +4,4 @@ refreshPackage: request
 
     package := request at: #package.
 
-    request respond: ({
-        #name -> package.
-        #children -> (FileSystemInfoBuilder new classesInPackage: package)
-    } asDictionary)
+    request respond: (FileSystemInfoBuilder new package: package)

@@ -1,6 +1,5 @@
 endpoints
 renameCategory: request
-	| class |
 
-	class := Compiler evaluate: (request at: #class).
-	class renameCategory: (request at: #category) toBe: (request at: #newName).
+	request classParam
+		renameCategory: (request at: #category) toBe: (request at: #newName).
