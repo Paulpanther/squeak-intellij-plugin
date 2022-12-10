@@ -22,6 +22,9 @@ onMessage: raw
 			(request action = #remove_class) ifTrue: [self removeClass: request].
 			(request action = #remove_method) ifTrue: [self removeMethod: request].
 			(request action = #remove_package) ifTrue: [self removePackage: request].
+			(request action = #get_class_comment) ifTrue: [self getClassComment: request].
+			(request action = #get_instance_variables) ifTrue: [self getInstanceVariables: request].
+			(request action = #get_class_variables) ifTrue: [self getClassVariables: request].
 		] on: Error do: [:ex |
 			self halt.
 			request respondError: ex asString
